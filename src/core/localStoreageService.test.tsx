@@ -1,6 +1,6 @@
 import { LOCAL_STORAGE_KEY } from "./config"
 import { localStorageService } from "./localStorageService"
-import { Todo } from "./types"
+import type { Todo } from "./types"
 
 describe('localStorageService', () => {
     const mockTodos: Todo[] = [

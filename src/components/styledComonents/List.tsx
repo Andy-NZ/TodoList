@@ -4,7 +4,7 @@ export const List = styled.ul`
     list-style: none; 
     padding: 0px;
 `
-interface ListItemProps {
+type ListItemProps = {
     disabled?: boolean
 }
 export const ListItem = styled.li<ListItemProps>`

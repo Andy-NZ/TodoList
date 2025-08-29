@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react"
 import userEvent from '@testing-library/user-event';
 import { TodoModal } from "./TodoModal";
 import { renderWithProviders } from "../utils/test-utils";
-import { Todo } from "../core/types";
+import type { Todo } from "../core/types";
 import * as todoSlice from "../slices/todosSlice";
 
 describe('TodoModal', () => {

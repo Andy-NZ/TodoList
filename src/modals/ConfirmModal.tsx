@@ -1,6 +1,6 @@
-import { Modal, ModalBackdrop, Button, ButtonGroup, ModalHeader, ModalBody, ModalFooter } from "../components/styledComonents";
+import { Modal, ModalBackdrop, Button, ButtonGroup, ModalHeader, ModalBody, ModalFooter } from "../components/styledComonents"
 
-interface Props {
+type Props = {
     showModal: boolean
     onConfirm: () => void
     onCancel: () => void
@@ -18,8 +18,8 @@ export const ConfirmModal = ({ showModal, onConfirm, onCancel }: Props) => {
                 </ModalBody>
                 <ModalFooter>
                     <ButtonGroup>
-                        <Button onClick={() => onCancel()}>Cancel</Button>
-                        <Button type="Danger" onClick={() => onConfirm()}>Delete</Button>
+                        <Button onClick={() => { onCancel() }}>Cancel</Button>
+                        <Button type="Danger" onClick={() => { onConfirm() }}>Delete</Button>
                     </ButtonGroup>
                 </ModalFooter>
             </Modal>

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-interface TextProps {
+type TextProps = {
     disabled?: boolean
 }
 export const Text = styled.span<TextProps>`

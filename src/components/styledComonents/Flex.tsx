@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-interface FlexProps {
+type FlexProps = {
     justifyContent?: "Space-Between" | 'End'
     alignItems?: "Center"
 }

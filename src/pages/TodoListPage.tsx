@@ -15,15 +15,15 @@ export function TodoListPage() {
 
     useEffect(() => {
         if (localStorageService.isTodosUndeinfed()) {
-            dispatch(fetchInitialTodos())
+            void dispatch(fetchInitialTodos())
         }
-    }, [])
+    }, [dispatch])
 
     return (
         <div style={{ padding: "1rem" }}>
             <Flex>
                 <h1>Todo List</h1>
-                <Button onClick={() => handleAdd()}>+ Add New Todo</Button>
+                <Button onClick={() => { handleAdd() }}>+ Add New Todo</Button>
             </Flex>
 
             <hr />
@@ -31,13 +31,13 @@ export function TodoListPage() {
             <List>
                 {todos.map(todo =>
                     <ListItem key={todo.id} disabled={todo.completed}>
-                        <TodoItem todo={todo} onEditClick={(todo) => handleEdit(todo)} onDeleteClick={(todo) => handleDelete(todo)} />
+                        <TodoItem todo={todo} onEditClick={(todo) => { handleEdit(todo) }} onDeleteClick={(todo) => { handleDelete(todo) }} />
                     </ListItem>
                 )}
             </List>
 
-            <ConfirmModal showModal={showDeleteModal} onCancel={() => setDeleteModal(false)} onConfirm={handleConfirmDelete} />
-            <TodoModal showModal={showTodoModal} editingTodo={editingTodo} onClose={() => handleClose()} />
+            <ConfirmModal showModal={showDeleteModal} onCancel={() => { setDeleteModal(false) }} onConfirm={handleConfirmDelete} />
+            <TodoModal showModal={showTodoModal} editingTodo={editingTodo} onClose={() => { handleClose() }} />
         </div >
     )
 }

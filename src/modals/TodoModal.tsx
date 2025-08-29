@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "../app/hooks"
-import { Todo } from "../core/types"
+import type { Todo } from "../core/types"
 import { addTodo, updateTodo } from "../slices/todosSlice"
 import { Modal, ModalBackdrop, Button, ButtonGroup, ModalBody, ModalFooter, ModalHeader, TextArea, ErrorMessage } from "../components/styledComonents";
 
-interface Props {
+type Props = {
     showModal: boolean
     editingTodo?: Todo
     onClose: () => void
@@ -65,13 +65,13 @@ export const TodoModal = ({ showModal, editingTodo, onClose }: Props) => {
                     {editingTodo ? 'Edit Todo' : 'Add Todo'}
                 </ModalHeader>
                 <ModalBody>
-                    <TextArea id="todo" value={todo} onChange={(e) => setTodo(e.target.value)} placeholder="Write your todo..." rows={4} />
+                    <TextArea id="todo" value={todo} onChange={(e) => { setTodo(e.target.value) }} placeholder="Write your todo..." rows={4} />
                     {error && <ErrorMessage>{error}</ErrorMessage>}
                 </ModalBody>
                 <ModalFooter>
                     <ButtonGroup>
-                        <Button onClick={() => handleClose()}>Close</Button>
-                        <Button type="Primary" onClick={() => handleSubmit()}>{editingTodo ? "Save" : "Add"}</Button>
+                        <Button onClick={() => { handleClose()}}>Close</Button>
+                        <Button type="Primary" onClick={() => { handleSubmit() }}>{editingTodo ? "Save" : "Add"}</Button>
                     </ButtonGroup>
                 </ModalFooter>
             </Modal>

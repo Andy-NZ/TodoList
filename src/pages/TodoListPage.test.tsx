@@ -1,10 +1,11 @@
 import { screen, within } from "@testing-library/react"
 import userEvent from '@testing-library/user-event';
-import { Todo } from "../core/types";
+import type { Todo } from "../core/types";
 import { renderWithProviders } from "../utils/test-utils";
 import { localStorageService } from "../core/localStorageService";
 import * as todoSlice from "../slices/todosSlice";
-import { AppStore, makeStore } from "../app/store";
+import type { AppStore} from "../app/store";
+import { makeStore } from "../app/store";
 import { TodoListPage } from "./TodoListPage";
 
 type LocalTestContext = {
@@ -91,7 +92,7 @@ describe('TodoListPage', () => {
             renderWithProviders(<TodoListPage />, { store })
 
             const editButtons = screen.queryAllByRole('button', { name: 'Edit' })
-            await userEvent.click(editButtons[0]!)
+            await userEvent.click(editButtons[0])
 
             const modal = screen.getByRole('dialog')
             const textArea = screen.getByRole('textbox')
@@ -105,7 +106,7 @@ describe('TodoListPage', () => {
             renderWithProviders(<TodoListPage />, { store })
 
             const editButtons = screen.queryAllByRole('button', { name: 'Edit' })
-            await userEvent.click(editButtons[0]!)
+            await userEvent.click(editButtons[0])
 
             const modal = screen.getByRole('dialog')
             const textArea = screen.getByRole('textbox')
@@ -128,7 +129,7 @@ describe('TodoListPage', () => {
             expect(screen.getByText('Todo task A')).toBeVisible()
 
             const deleteButtons = screen.queryAllByRole('button', { name: 'Delete' })
-            await userEvent.click(deleteButtons[0]!)
+            await userEvent.click(deleteButtons[0])
 
             expect(screen.getByText('Are you sure you want to delete it?')).toBeVisible()
 
@@ -144,7 +145,7 @@ describe('TodoListPage', () => {
             expect(screen.getByText('Todo task A')).toBeVisible()
 
             const deleteButtons = screen.queryAllByRole('button', { name: 'Delete' })
-            await userEvent.click(deleteButtons[0]!)
+            await userEvent.click(deleteButtons[0])
 
             expect(screen.getByText('Are you sure you want to delete it?')).toBeVisible()
 

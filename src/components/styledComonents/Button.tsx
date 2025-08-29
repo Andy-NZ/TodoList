@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 
-interface ButtonProps {
+type ButtonProps = {
     type?: 'Primary' | 'Danger'
 }
 export const Button = styled.button<ButtonProps>` 
