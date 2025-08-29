@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../app/hooks'
-import { fetchInitialTodos, } from '../slices/todosSlice'
-import { TodoItem } from '../components/TodoItem'
-import { Button, Flex, List, ListItem } from '../components/styledComonents'
-import { localStorageService } from '../core/localStorageService'
-import { TodoModal } from '../modals/TodoModal'
-import { ConfirmModal } from '../modals/ConfirmModal'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { fetchInitialTodos, } from '../../slices/todosSlice'
+import { TodoItem } from './TodoItem'
+import { Button, Flex, List, ListItem } from '../../components'
+import { localStorageService } from '../../core/localStorageService'
+import { TodoModal } from '../../modals/TodoModal'
+import { ConfirmModal } from '../../modals/ConfirmModal'
 import { useTodoList } from './useTodoList'
 
 export function TodoListPage() {

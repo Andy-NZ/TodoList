@@ -1,7 +1,7 @@
 import type { AppStore} from "../app/store";
 import { makeStore } from "../app/store"
-import { localStorageService } from "../core/localStorageService"
 import type { NewTodo, Todo } from "../core/types"
+import { localStorageService } from "../core/localStorageService"
 import reducer, { addTodo, deleteTodo, selectTodos, todoSlice, updateTodo } from "./todosSlice"
 
 type LocalTestContext = {

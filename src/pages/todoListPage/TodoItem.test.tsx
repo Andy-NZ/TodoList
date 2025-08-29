@@ -1,9 +1,9 @@
 import { screen } from "@testing-library/react"
 import userEvent from '@testing-library/user-event';
-import type { Todo } from "../core/types"
+import type { Todo } from "../../core/types"
 import { TodoItem } from "./TodoItem"
-import { renderWithProviders } from "../utils/test-utils"
-import * as todoSlice from "../slices/todosSlice";
+import { renderWithProviders } from "../../utils/test-utils"
+import * as todoSlice from "../../slices/todosSlice";
 
 describe('TodoItem', () => {
     const todo: Todo = { id: 1, todo: 'Todo task A', completed: false }

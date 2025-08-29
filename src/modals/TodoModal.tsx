@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppDispatch } from "../app/hooks"
 import type { Todo } from "../core/types"
 import { addTodo, updateTodo } from "../slices/todosSlice"
-import { Modal, ModalBackdrop, Button, ButtonGroup, ModalBody, ModalFooter, ModalHeader, TextArea, ErrorMessage } from "../components/styledComonents";
+import { Modal, ModalBackdrop, Button, ButtonGroup, ModalBody, ModalFooter, ModalHeader, TextArea, ErrorMessage } from "../components";
 
 type Props = {
     showModal: boolean

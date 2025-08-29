@@ -1,12 +1,12 @@
 import { screen, within } from "@testing-library/react"
 import userEvent from '@testing-library/user-event';
-import type { Todo } from "../core/types";
-import { renderWithProviders } from "../utils/test-utils";
-import { localStorageService } from "../core/localStorageService";
-import * as todoSlice from "../slices/todosSlice";
-import type { AppStore} from "../app/store";
-import { makeStore } from "../app/store";
+import { makeStore } from "../../app/store";
+import type { Todo } from "../../core/types";
 import { TodoListPage } from "./TodoListPage";
+import type { AppStore} from "../../app/store";
+import * as todoSlice from "../../slices/todosSlice";
+import { renderWithProviders } from "../../utils/test-utils";
+import { localStorageService } from "../../core/localStorageService";
 
 type LocalTestContext = {
     store: AppStore

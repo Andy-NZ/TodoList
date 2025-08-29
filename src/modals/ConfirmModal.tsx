@@ -1,4 +1,4 @@
-import { Modal, ModalBackdrop, Button, ButtonGroup, ModalHeader, ModalBody, ModalFooter } from "../components/styledComonents"
+import { Modal, ModalBackdrop, Button, ButtonGroup, ModalHeader, ModalBody, ModalFooter } from "../components"
 
 type Props = {
     showModal: boolean

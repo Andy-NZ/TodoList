@@ -1,7 +1,7 @@
-import { useAppDispatch } from "../app/hooks"
-import { updateTodo } from "../slices/todosSlice"
-import type { Todo } from "../core/types"
-import { Button, ButtonGroup, Flex, Text } from "./styledComonents"
+import { useAppDispatch } from "../../app/hooks"
+import type { Todo } from "../../core/types"
+import { updateTodo } from "../../slices/todosSlice"
+import { Button, ButtonGroup, Flex, Text } from "../../components"
 
 type Props = {
     todo: Todo

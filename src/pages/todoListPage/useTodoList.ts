@@ -1,7 +1,7 @@
 import { useState } from "react";
-import type { Todo } from "../core/types";
-import { useAppDispatch } from "../app/hooks";
-import { deleteTodo } from "../slices/todosSlice";
+import type { Todo } from "../../core/types";
+import { useAppDispatch } from "../../app/hooks";
+import { deleteTodo } from "../../slices/todosSlice";
 
 export function useTodoList() {
   const dispatch = useAppDispatch();

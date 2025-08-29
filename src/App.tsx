@@ -1,4 +1,4 @@
-import { TodoListPage } from './pages/TodoListPage'
+import { TodoListPage } from './pages/todoListPage/TodoListPage'
 
 export function App() {
   return <TodoListPage />
